@@ -2,7 +2,7 @@ trigger:
 - main   # runs pipeline on any push to main branch
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: SelfHosted Pool
 
 steps:
 - script: echo "Hello, DevOps from Azure Pipeline!"
