@@ -1,5 +1,7 @@
 trigger:
-- main   # runs pipeline on any push to main branch
+  branches:
+    include:
+      - main   # runs pipeline on any push to main branch
 
 pool:
   name: SelfHostedPool
