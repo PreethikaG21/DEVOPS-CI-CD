@@ -1,0 +1,14 @@
+trigger:
+- main   # runs pipeline on any push to main branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Hello, DevOps from Azure Pipeline!"
+  displayName: 'Print Hello World'
+
+- script: |
+    chmod +x run.sh
+    ./run.sh
+  displayName: 'Run hello script'
