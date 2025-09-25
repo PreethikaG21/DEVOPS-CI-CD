@@ -1,16 +1,11 @@
 trigger:
   branches:
     include:
-      - main   # runs pipeline on any push to main branch
+      - main   # pipeline triggers on pushes to main branch
 
 pool:
-  name: SelfHostedPool
+  name: SelfHostedPool   # your Linux VM agent pool
 
 steps:
-- script: echo "Hello, DevOps from Azure Pipeline!"
-  displayName: 'Print Hello World'
+- script: ./run.sh   # only runs your run.sh script
 
-- script: |
-    chmod +x run.sh
-    ./run.sh
-  displayName: 'Run hello script'
