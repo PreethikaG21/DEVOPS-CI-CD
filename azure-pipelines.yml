@@ -2,7 +2,7 @@ trigger:
 - main   # runs pipeline on any push to main branch
 
 pool:
-  name: SelfHosted Pool
+  name: SelfHostedPool
 
 steps:
 - script: echo "Hello, DevOps from Azure Pipeline!"
